@@ -22,7 +22,7 @@ RUN set -x \
     && rm bin/*.bat \
     && rm tomcat.tar.gz*
 
-COPY /tmp/workspace/DSL_Pipeline/target/AbcabWebApp.war $CATALINA_HOME/webapps/
+COPY /target/*.war $CATALINA_HOME/webapps/
 
 EXPOSE 8888
 CMD ["catalina.sh", "run"]
