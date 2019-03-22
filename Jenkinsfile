@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        any
+     lable "Slave1"
     }
 
 stages{
