@@ -2,7 +2,7 @@ pipeline{
 
 agent 
 {
-label "Linux"
+label "Slave1"
 }
 
 stages{
