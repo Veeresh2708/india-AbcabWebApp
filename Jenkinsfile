@@ -6,7 +6,7 @@ label "Slave1"
 }
 
 stages{
-    stage("Build"){
+    stage("Building in progress"){
         steps{
              sh"mvn clean package"
              }
@@ -19,7 +19,7 @@ stages{
               sh" docker push veereshvanga/abcabwebapp"
              }
            }	
-    stage("Deploy for production"){
+    stage("Deploy into concern Enviornment"){
 
         steps{
             sh "ssh -tt -v -o StrictHostKeyChecking=no root@172.31.27.172 'docker run -it -d --name tomcat -p 8080:8888 veereshvanga/abcabwebapp:buildimage1'"
