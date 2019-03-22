@@ -20,7 +20,7 @@ stages{
             branch 'master'
         }
         steps{
-            sh "ssh -tt -v -o StrictHostKeyChecking=no root@172.31.41.213 'docker run -it -d --name tomcat -p 8080:8888 veereshvanga/Abcab/tomcat:buildimage /bin/bash'"
+            sh "ssh -tt -v -o StrictHostKeyChecking=no root@172.31.27.172 'docker run -it -d --name tomcat -p 8080:8888 veereshvanga/Abcab/tomcat:buildimage /bin/bash'"
         }
     }
 }
