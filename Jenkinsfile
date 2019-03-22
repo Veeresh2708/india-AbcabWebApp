@@ -1,6 +1,6 @@
 pipeline{
 
-agentgent Slave1
+agent Slave1
 
 stages{
     stage("Build"){
