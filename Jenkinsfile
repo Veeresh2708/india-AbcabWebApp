@@ -1,7 +1,6 @@
 pipeline{
-
     agent {
-        Slave1
+        any
     }
 
 stages{
