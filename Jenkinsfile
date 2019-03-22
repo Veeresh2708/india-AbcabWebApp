@@ -1,7 +1,9 @@
 pipeline{
-    agent {
-     lable "Slave1"
-    }
+
+agent 
+{
+label "Linux"
+}
 
 stages{
     stage("Build"){
