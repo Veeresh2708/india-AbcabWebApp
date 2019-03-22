@@ -16,7 +16,7 @@ stages{
               sh" docker login --username veereshvanga --password Sainath@12#"
               sh" docker build -t tomcat:buildimage ."
               sh" docker tag tomcat:buildimage veereshvanga/abcabwebapp:buildimage1"
-              sh" docker push veereshvanga/abcabwebapp:buildimage"
+              sh" docker push veereshvanga/abcabwebapp"
              }
            }	
     stage("Deploy for production"){
