@@ -17,7 +17,7 @@ stages{
              withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
               sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
               //sh" docker login --username veereshvanga --password Sainath@12#"
-              sh" docker build -t tomcat:buildimage+ $BUILD_NUMBER ."
+              sh" docker build -t tomcat:buildimage$BUILD_NUMBER ."
               sh" docker tag tomcat:buildimage veereshvanga/abcabwebapp:buildimage+ $BUILD_NUMBER"
               sh" docker push veereshvanga/abcabwebapp"
              }
