@@ -21,7 +21,8 @@ stages{
               sh" docker tag tomcat:buildimage veereshvanga/abcabwebapp:buildimage+ $BUILD_NUMBER"
               sh" docker push veereshvanga/abcabwebapp"
              }
-           }	
+           }
+    }
     stage("Deploy into concern Enviornment"){
 
         steps{
