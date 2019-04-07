@@ -9,7 +9,7 @@ stages{
     stage("Building in progress"){
         steps{
              sh"mvn clean package"
-            sh"echo ":$BUILD_NUMBER""
+            sh"echo $BUILD_NUMBER"
              }
             }
     stage("Creating a Custom image with the latest build"){
