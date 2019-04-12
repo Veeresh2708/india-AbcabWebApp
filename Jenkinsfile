@@ -29,7 +29,7 @@ stages{
     stage("Deploy into concern Enviornment"){
 
         steps{
-            sh "ssh -tt -v -o StrictHostKeyChecking=no root@${params.servername} 'docker run -it -d --name tomcat -p 8888:8080 veereshvanga/abcabwebapp:buildimage$BUILD_NUMBER'"
+            sh "ssh -tt -v -o StrictHostKeyChecking=no root@${params.servername} 'docker run -it -d --name tomcat$BUILD_NUMBER -p 8888:8080 veereshvanga/abcabwebapp:buildimage$BUILD_NUMBER'"
         }
     }
 }
