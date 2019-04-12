@@ -4,6 +4,11 @@ agent
 {
 label "Slave1"
 }
+ parameters
+{
+ choice(name: 'Environment',choices: 'Dev\nUAT\nPRD',description: 'Please select Environment')
+ string(name:  'servername',description: 'Please enter ip address of Machine where you want to deploy artifact')
+}
 
 stages{
     stage("Building in progress"){
@@ -24,7 +29,7 @@ stages{
     stage("Deploy into concern Enviornment"){
 
         steps{
-            sh "ssh -tt -v -o StrictHostKeyChecking=no root@172.31.27.172 'docker run -it -d --name tomcat -p 8080:8888 veereshvanga/abcabwebapp:buildimage1'"
+            sh "ssh -tt -v -o StrictHostKeyChecking=no root@${params.servername} 'docker run -it -d --name tomcat -p 8080:8888 veereshvanga/abcabwebapp:buildimage$BUILD_NUMBER'"
         }
     }
 }
