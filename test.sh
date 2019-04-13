@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "Enter the URL:"
-read site
+site=`http://13.250.122.153:8888/AbcabWebApp/`
 
 echo "please wait while we are accessing the URL:"
 sleep 10
