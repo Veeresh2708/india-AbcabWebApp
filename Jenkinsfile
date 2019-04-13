@@ -2,7 +2,7 @@ pipeline{
 
 agent 
 {
-label "Slave1"
+label "Slave_unix"
 }
  parameters
 {
