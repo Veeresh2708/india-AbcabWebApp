@@ -1,13 +1,13 @@
 #!/bin/bash
 
-site=`http://13.250.122.153:8888/AbcabWebApp/`
+#site=`http://13.250.122.153:8888/AbcabWebApp/`
 
-echo "please wait while we are accessing the URL:"
-sleep 10
+#echo "please wait while we are accessing the URL:"
+#sleep 10
 
-echo accessing $site
+echo accessing "http://13.250.122.153:8888/AbcabWebApp/"
 
-output=`curl -Is $site | head -n 1 | cut -c 10-12`
+output=`curl -Is http://13.250.122.153:8888/AbcabWebApp/ | head -n 1 | cut -c 10-12`
 
 echo $output
 
