@@ -36,10 +36,11 @@ stages{
  stage("Testing the deployment"){
  
      steps{
-         Script{
-             sh "TestUrl.sh"
-         }
-      }
+            script{
+                sh 'ls -lrt /root/Scripts'
+                sh '/root/Scripts/web.sh'
+            }
+        }
   }
  }
 }
