@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: AbcabWebApp
+  labels:
+    country: india
+spec:
+  containers:
+  - name: Abcab
+    image: veereshvanga/abcabwebapp:buildimage9
+    ports:
+      - containerPort: 80808
