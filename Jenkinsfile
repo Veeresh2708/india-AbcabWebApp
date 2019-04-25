@@ -37,7 +37,7 @@ stages{
  
      steps{
          Script{
-             sh testUrl.sh
+             sh "testUrl.sh"
          }
       }
   }
