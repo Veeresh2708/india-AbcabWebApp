@@ -8,8 +8,7 @@ label "Slave_unix"
 {
  choice(name: 'Environment',choices: 'Dev\nUAT\nPRD',description: 'Please select Environment')
  string(name:  'servername',description: 'Please enter ip address of Machine where you want to deploy artifact')
- string(name: 'SeverUrl',description: 'Please enter the test URL')
-}
+ }
 
 stages{
     stage("Building in progress"){
