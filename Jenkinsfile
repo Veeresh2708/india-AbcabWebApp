@@ -13,7 +13,7 @@ stages{
             }
     stage("Creating a Custom image with the latest build"){
         steps{
-              sh" docker login --username veereshvanga --password Sainath@12#"
+              sh" docker login --username <Username> --password <Password>"
               sh" docker build -t tomcat:buildimage ."
               sh" docker tag tomcat:buildimage veereshvanga/abcabwebapp:buildimage1"
               sh" docker push veereshvanga/abcabwebapp"
